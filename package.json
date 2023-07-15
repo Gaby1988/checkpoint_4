@@ -1,0 +1,39 @@
+{
+  "name": "checkpoint4",
+  "version": "1.0.0",
+  "description": "checkpoint 4 React-Express-MySQL",
+  "main": "index.js",
+  "config": {
+    "cli": "npm"
+  },
+  "scripts": {
+    "postinstall": "cross-env-shell \"husky install && cd ./frontend && $npm_package_config_cli install && cd ../backend && $npm_package_config_cli install\"",
+    "migrate": "cd ./backend && node migrate.js",
+    "dev": "cross-env-shell 'concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"$npm_package_config_cli:dev-*\"'",
+    "dev-front": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && $npm_package_config_cli run dev\"",
+    "lint": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run lint && cd ../backend && $npm_package_config_cli run lint\"",
+    "fix": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run fix && cd ../backend && $npm_package_config_cli run fix\""
+  },
+  "dependencies": {
+    "ansi-regex": "^5.0.1",
+    "argon2": "^0.30.3",
+    "debug": "^3.2.7",
+    "eslint-import-resolver-node": "^0.3.7",
+    "npmlog": "^5.0.1",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "eslint-import-resolver-node": "^0.3.7",
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "keywords": [],
+  "author": "Gabriel"
+}

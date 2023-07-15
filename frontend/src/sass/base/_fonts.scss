@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "Lugrasimo-Regular";
+	src: url("../../assets/fonts/Lugrasimo-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Lumanosimo-Regular";
+	src: url("../../assets/fonts/Lumanosimo-Regular.ttf") format("truetype");
+}
+
+$app-primary-font: "Lugrasimo-Regular", sans-serif;
+$app-secondary-font: "Lumanosimo-Regular", sans-serif;
