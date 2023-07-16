@@ -1,5 +1,6 @@
 @import "./sass/utils/mixins-media-queries";
 @import "./sass/utils/mixins-input-button";
+@import "./sass/utils/mixins";
 @import "./sass/base/fonts";
 @import "./sass/utils/variables";
 
@@ -7,18 +8,18 @@
 
 @import "./sass/pages/Registration.scss";
 
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
-}
+/* ----------------           Components            ---------------- */
+
+@import "./sass/components/Navbar.scss";
+
 
 * {
 	font-family: $app-primary-font;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 }
 
 input {

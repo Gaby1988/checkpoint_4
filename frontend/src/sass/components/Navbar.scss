@@ -1,0 +1,24 @@
+.container_navbar {
+	width: 100vw;
+	height: 65px;
+	border-bottom: 2px solid blue;
+	background: $app-primary-background-color-linear;
+
+	.list_ul__li__navbar {
+		@include display-flex-justify(100%, center);
+
+		> li {
+			width: calc(100% / 4);
+			font-size: $app-font-size-p;
+
+			&::first-letter {
+				font-size: $app-font-size-li;
+			}
+
+			.list_ul__li__img__coffee_mug {
+				height: 100%;
+				width:65px;
+			}
+		}
+	}
+}

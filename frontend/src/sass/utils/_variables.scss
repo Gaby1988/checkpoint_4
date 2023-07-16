@@ -10,12 +10,16 @@ $app-font-size-h1: calc(40px + (50 - 40) * ((100vw - 300px) / (1600 - 300)));
 
 $app-font-size-h2: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
 
+$app-font-size-li: calc(25px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
+
 $app-font-size-p: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
 
 /* ------------------ background-color ----------------- */
 
 $app-primary-background-color: #e6cece84;
 $app-secondary-background-color: #6a5c5076;
+
+$app-primary-background-color-linear:linear-gradient(249deg, rgb(189 194 198 / 18%) 0%, rgb(68 121 144 / 43%) 35%, rgb(159 187 193 / 20%) 64%, rgba(0, 22, 255, 0.1993172269) 100%);
 
 /* ------------------ color ----------------- */
 
