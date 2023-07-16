@@ -1,12 +1,34 @@
+@import "./sass/utils/mixins-media-queries";
+@import "./sass/utils/mixins-input-button";
+@import "./sass/base/fonts";
+@import "./sass/utils/variables";
+
+/* ----------------           Pages            ---------------- */
+
+@import "./sass/pages/Registration.scss";
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	font-family: $app-primary-font;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input {
+	height: 30px;
+	width: 250px;
+}
+
+div > label {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	font-size: $app-font-size-label;
 }
