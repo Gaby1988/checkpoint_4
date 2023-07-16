@@ -1,3 +1,31 @@
 /* button border-color */
 
 $app-button-color: transparent;
+
+/* ------------------ size font ----------------- */
+
+$app-font-size-label: calc(14px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+
+$app-font-size-h1: calc(40px + (50 - 40) * ((100vw - 300px) / (1600 - 300)));
+
+$app-font-size-h2: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
+
+$app-font-size-p: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+
+/* ------------------ background-color ----------------- */
+
+$app-primary-background-color: #e6cece84;
+$app-secondary-background-color: #6a5c5076;
+
+/* ------------------ color ----------------- */
+
+$app-primary-button-color: #fff;
+$app-secondary-button-color: #000000;
+$app-primary-button-color: #fff;
+$app-secondary-button-color: #000000;
+
+$app-primary-button-color-gradient: linear-gradient(44deg, #483a54, #00b5ff);
+
+$app-secondary-button-color-gradient: linear-gradient(135deg, #007bff, #00bfff);
+
+$app-third-button-color-gradient: linear-gradient(135deg, #4caf50, #87d64a);
