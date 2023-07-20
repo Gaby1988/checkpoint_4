@@ -1,6 +1,13 @@
-@mixin display-flex-justify ($height, $align) {
+@mixin display-flex-justify($height, $align) {
 	height: $height;
 	display: flex;
 	justify-content: center;
+	align-items: $align;
+}
+
+@mixin display-flex-flex-direction-column-justify($justify, $align) {
+	display: flex;
+	flex-direction: column;
+	justify-content: $justify;
 	align-items: $align;
 }
