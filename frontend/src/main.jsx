@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import App from "./App";
 import "./App.scss";
 import RegistrationAndConnexion from "./pages/RegistrationAndConnexion";
+import Shopping from "./pages/Shopping";
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <RegistrationAndConnexion />,
+			},
+			{
+				path: "/achat",
+				element: <Shopping />,
 			},
 		],
 	},
