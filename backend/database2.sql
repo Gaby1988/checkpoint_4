@@ -6,6 +6,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `products` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `picture` TEXT NOT NULL,
     `name` VARCHAR(255) NOT NULL,
     `origin` VARCHAR(255) NOT NULL,
     `description` VARCHAR(500),
@@ -47,12 +48,29 @@ VALUES
     ('user3@example.com', 'password3');
 
 INSERT INTO
-    products (name, origin, description, price)
+    products (picture, name, origin, description, price)
 VALUES
-    ('Coffee1', 'Origin1', 'Description1', 9.99),
-    ('Coffee2', 'Origin2', 'Description2', 12.99),
-    ('Tea1', 'Origin3', 'Description3', 7.99),
-    ('Tea2', 'Origin4', 'Description4', 8.99);
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe1.jpg?alt=media&token=a5ece020-6220-4a16-a958-efb1108e1063", 'café noir', 'colombie', 'intense', 9.99),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe2.jpg?alt=media&token=5c46ba59-554c-4633-8430-bf95c1a4bcb6", 'café basic', 'france', 'à éviter', 12.99),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe3.jpg?alt=media&token=3478e321-b098-41a2-a3af-ec4d0f72f87a", 'café', 'Inconnue', 'grain de café', 7.99),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe4.jpg?alt=media&token=feb763a3-e25b-43a0-9586-f359e70301eb", 'café chantilly', 'maison', 'café avec rajout de chantilly', 15.99),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe5.jpg?alt=media&token=bc4f1f29-017c-4d30-b281-cb164cdc9db1", 'café clair', 'campagne', 'belle photo', 10.75),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe2.jpg?alt=media&token=ed5ae096-5cb6-48cc-9d82-3ed6fe888e41", 'the vert', 'inde', '...', 8.75),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe3.jpg?alt=media&token=4f14de30-dbe2-414c-aec3-0a4af1aa916e", 'the grey', 'france', 'salon de the', 4.50),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe4.jpg?alt=media&token=8e07c5a3-00a8-4d44-9d3f-d54af36368fe", 'the menthe', 'espagne', 'doux et agréable', 15),
+    ("https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe5.jpg?alt=media&token=4ddbf337-b7d7-42f4-b0fa-67f90fc8a097", 'the noir', 'angleterre', 'fort en bouche', 20.22);
+
+
+
+
+
+
+
+
+
+
+
+
 
 INSERT INTO items (quantity, total)
 VALUES
