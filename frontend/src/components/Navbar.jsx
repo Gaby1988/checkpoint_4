@@ -16,21 +16,23 @@ function Navbar() {
 				console.error(error);
 			});
 	}, []);
-
+	console.info(article);
 	return (
 		<div className="container_navbar">
-			<ul className="list_ul__li__navbar">
-				<li>{article[0].mail.slice(0,5)}</li>
-				<li>
-					<img className="list_ul__li__img__coffee_mug" src={coffeeMug} />
-				</li>
-				<li>
-					<Link to="/achat">Nombre {article[0].totalQuantity}</Link>
-				</li>
-				<li>
-					<Link to="/panier">Prix {article[0].totalPanier} €</Link>
-				</li>
-			</ul>
+			{article.length > 0 && (
+				<ul className="list_ul__li__navbar">
+					<li>{article[0].mail.slice(0, 5)}</li>
+					<li>
+						<img className="list_ul__li__img__coffee_mug" src={coffeeMug} />
+					</li>
+					<li>
+						<Link to="/achat">Nombre {article[0].totalQuantity}</Link>
+					</li>
+					<li>
+						<Link to="/panier">Prix {article[0].totalPanier} €</Link>
+					</li>
+				</ul>
+			)}
 		</div>
 	);
 }
