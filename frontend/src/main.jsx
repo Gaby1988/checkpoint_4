@@ -8,6 +8,7 @@ import App from "./App";
 import "./App.scss";
 import RegistrationAndConnexion from "./pages/RegistrationAndConnexion";
 import Shopping from "./pages/Shopping";
+import Basket from "./pages/Basket";
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: "/achat",
 				element: <Shopping />,
+			},
+			{
+				path: "/panier",
+				element: <Basket />,
 			},
 		],
 	},
