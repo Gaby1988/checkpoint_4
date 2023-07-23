@@ -8,13 +8,18 @@
     column-gap: 90px;
 	}
 
+	@include desktop_1024__px {
+		width: 70%;
+    margin-inline: auto;
+	}
+
 	.article_shopping {
 		@include card-form-primary;
 		@include display-grid(3, 5, 5px);
 
 		.article_shopping__img__picture {
 			width: 90%;
-			height: 90%;
+			height: 120px;
 			border-radius: $border-radius-primary-card;
 			grid-column: 1/-1;
 			grid-row: 2;
