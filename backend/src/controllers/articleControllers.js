@@ -91,6 +91,19 @@ const getArticleByQuantityAndTotalPriceByUser = async (req, res) => {
 		res.status(500).send(error);
 	}
 };
+const deleteItemById = async (req, res) => {
+	const { id } = req.params;
+	try {
+		const item = await ArticleManager.deleteItems(id);
+		if (item.length === 0) {
+			res.status(404).send("No item and price found");
+		} else {
+			res.status(200).send(item);
+		}
+	} catch (error) {
+		res.status(500).send(error);
+	}
+};
 
 module.exports = {
 	getAllItems,
@@ -99,4 +112,5 @@ module.exports = {
 	buyArticleAndPutInTableItems,
 	buyArticleAndPutInTableItemsUpdate,
 	getArticleByQuantityAndTotalPriceByUser,
+	deleteItemById,
 };

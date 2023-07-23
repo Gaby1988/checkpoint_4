@@ -8,11 +8,11 @@
 
 @import "./sass/pages/Registration.scss";
 @import "./sass/pages/Shopping.scss";
+@import "./sass/pages/Basket.scss";
 
 /* ----------------           Components            ---------------- */
 
 @import "./sass/components/Navbar.scss";
-
 
 * {
 	font-family: $app-primary-font;
@@ -23,14 +23,19 @@
 	list-style: none;
 }
 
-input {
-	height: 30px;
-	width: 250px;
+div {
+	background-color: $app-primary-background-color;
+	color: #FFF;
 }
 
+// input {
+// 	height: 30px;
+// 	width: 250px;
+// }
+
 div > label {
-	display: flex;
-	flex-direction: column;
-	align-items: baseline;
-	font-size: $app-font-size-label;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: baseline;
+	// font-size: $app-font-size-label;
 }
