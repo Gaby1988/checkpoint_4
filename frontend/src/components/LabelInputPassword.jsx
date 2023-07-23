@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import visible from "../assets/icons/visible.png";
-import invisible from "../assets/icons/invisible.png";
+import visible from "../assets/icons/visible.svg";
+import invisible from "../assets/icons/invisible.svg";
 
 function LabelInputPassword({
 	htmlFor,

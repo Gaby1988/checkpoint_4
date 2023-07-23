@@ -1,7 +1,7 @@
 @mixin display-flex-justify($height, $align) {
 	height: $height;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: $align;
 }
 
@@ -13,7 +13,7 @@
 }
 
 @mixin card-form-primary {
-	width: 70%;
+	width: 225px;
 	height: 300px;
 	overflow: hidden;
 	background-color: $app-seven-background-color;
@@ -21,7 +21,7 @@
 	margin-top: 20px;
 }
 @mixin card-form-secondary {
-	width: 90%;
+	width: 288px;
 	height: 110px;
 	overflow: hidden;
 	background-color: $app-seven-background-color;
@@ -36,3 +36,11 @@ grid-template-rows: 5px repeat($rows, 1fr) 5px;
 gap: $gap;
 }
 
+
+@mixin button-login-signup {
+	background-color: $app-five-background-color;
+	border-radius: $app-button-radius-login;
+	padding: $app-button-padding;
+	width: fit-content;
+	margin-inline: auto;
+}

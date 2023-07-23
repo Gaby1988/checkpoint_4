@@ -23,23 +23,42 @@
 	list-style: none;
 }
 
-div {
-	background-color: $app-primary-background-color;
-	color: #FFF;
+#root {
+	height: 100vh;
+}
+h2 {
+	color: $app-nine-background-color;
 }
 
-// article {
-// 	width: 80%;
-// }
+a,
+li {
+	color: $app-four-background-color;
+	text-align: center;
+}
 
-// input {
-// 	height: 30px;
-// 	width: 250px;
-// }
+div {
+	background-color: $app-primary-background-color;
+	color: $app-nine-background-color;
+}
+
+article {
+	width: 80%;
+}
+
+input {
+	height: 30px;
+	width: 250px;
+}
 
 div > label {
-	// display: flex;
-	// flex-direction: column;
-	// align-items: baseline;
-	// font-size: $app-font-size-label;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	font-size: $app-font-size-label;
+	color: $app-four-background-color;
+	display: inline-block;
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
 }

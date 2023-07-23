@@ -105,7 +105,7 @@ CREATE TABLE `items` (
 INSERT INTO
     users (email, hashedPassword)
 VALUES
-    ('user1@example.com', 'password1'),
+    ('Gaby@example.com', 'password1'),
     ('user2@example.com', 'password2'),
     ('user3@example.com', 'password3');
 
@@ -123,49 +123,49 @@ VALUES
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe2.jpg?alt=media&token=5c46ba59-554c-4633-8430-bf95c1a4bcb6",
         'café basic',
         'france',
-        'à éviter',
+        'warning',
         12.99
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe3.jpg?alt=media&token=3478e321-b098-41a2-a3af-ec4d0f72f87a",
         'café',
         'Inconnue',
-        'grain de café',
+        'grain',
         7.99
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe5.jpg?alt=media&token=bc4f1f29-017c-4d30-b281-cb164cdc9db1",
         'café clair',
         'campagne',
-        'belle photo',
+        'fort',
         10.75
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe2.jpg?alt=media&token=ed5ae096-5cb6-48cc-9d82-3ed6fe888e41",
         'the vert',
         'inde',
-        '...',
+        'savoureux',
         8.75
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe3.jpg?alt=media&token=4f14de30-dbe2-414c-aec3-0a4af1aa916e",
         'the grey',
         'france',
-        'salon de the',
+        'doux',
         4.50
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe4.jpg?alt=media&token=8e07c5a3-00a8-4d44-9d3f-d54af36368fe",
         'the menthe',
         'espagne',
-        'doux et agréable',
+        'agréable',
         15
     ),
     (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fthe5.jpg?alt=media&token=4ddbf337-b7d7-42f4-b0fa-67f90fc8a097",
         'the noir',
         'angleterre',
-        'fort en bouche',
+        'fort',
         20.22
     );
 

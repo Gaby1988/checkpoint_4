@@ -1,5 +1,12 @@
 .container_shopping {
+	width: 100vw;
 	@include display-flex-flex-direction-column-justify(center, center);
+
+	@include tablet_744__px {
+		flex-direction: initial;
+    flex-wrap: wrap;
+    column-gap: 90px;
+	}
 
 	.article_shopping {
 		@include card-form-primary;

@@ -1,23 +1,31 @@
 .container_navbar {
 	width: 100vw;
 	height: 65px;
-	border-bottom: 2px solid blue;
-	background: $app-primary-background-color-linear;
+	border-bottom: 2px solid $app-heigth-background-color;
+	background-color: $app-primary-background-color;
+
+	@include tablet_744__px {
+		height: 90px;
+	}
 
 	.list_ul__li__navbar {
 		@include display-flex-justify(100%, center);
 
+		li:nth-child(1n + 2) {
+			background-color: $app-heigth-background-color;
+			border-radius: $border-radius-primary-card;
+		}
+
+		.list_li__name__people {
+			text-decoration: underline wavy;
+		}
+
 		> li {
-			width: calc(100% / 4);
+			width: 100px;
 			font-size: $app-font-size-p;
 
 			&::first-letter {
 				font-size: $app-font-size-li;
-			}
-
-			.list_ul__li__img__coffee_mug {
-				height: 100%;
-				width:65px;
 			}
 		}
 	}

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
-import coffeeMug from "../assets/icons/coffee-mug.svg";
 
 function Navbar() {
 	const [article, setArticle] = useState([]);
@@ -18,22 +17,19 @@ function Navbar() {
 	}, []);
 	console.info(article);
 	return (
-		<div className="container_navbar">
+		<nav className="container_navbar">
 			{article.length > 0 && (
 				<ul className="list_ul__li__navbar">
-					<li>{article[0].mail.slice(0, 5)}</li>
+					<li className="list_li__name__people">{article[0].mail.split("@").slice(0, 1)}</li>
 					<li>
-						<img className="list_ul__li__img__coffee_mug" src={coffeeMug} />
-					</li>
-					<li>
-						<Link to="/achat">Nombre {article[0].totalQuantity}</Link>
+						<Link to="/achat">Quantité {article[0].totalQuantity}</Link>
 					</li>
 					<li>
 						<Link to="/panier">Prix {article[0].totalPanier} €</Link>
 					</li>
 				</ul>
 			)}
-		</div>
+		</nav>
 	);
 }
 export default Navbar;
