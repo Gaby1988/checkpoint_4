@@ -7,6 +7,12 @@
 		column-gap: 45px;
 	}
 
+	@include desktop_1024__px {
+		width: 80%;
+		margin-inline: auto;
+		column-gap: 90px;
+	}
+
 	.article_container__basket__card {
 		@include card-form-secondary;
 		@include display-grid(4, 3, 5px);

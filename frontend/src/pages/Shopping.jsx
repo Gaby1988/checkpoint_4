@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import api from "../services/api";
 import ContainerArticleSendAndBuy from "../components/ContainerArticleSendAndBuy";
+import { QuantityAndPriceContext } from "../context/QuantityAndPriceContext";
 
 function Shopping() {
+	const { setNumber } = useContext(QuantityAndPriceContext);
 	const [dataArticleToSend, setDataArticleToSend] = useState([]);
 	const [dataItems, setDataItems] = useState([]);
 	const [idUser1, setIdUser1] = useState([]);
@@ -32,6 +34,7 @@ function Shopping() {
 		const articleExists = dataItems[0].some(
 			(item) => item.product_id === id && item.user_id === user1ID
 		);
+		setNumber((prev) => prev + 1);
 		try {
 			setRefresh(dataItems);
 			if (!articleExists) {

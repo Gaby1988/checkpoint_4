@@ -1,5 +1,4 @@
 @import "./sass/utils/mixins-media-queries";
-@import "./sass/utils/mixins-input-button";
 @import "./sass/utils/mixins";
 @import "./sass/base/fonts";
 @import "./sass/utils/variables";
@@ -25,6 +24,11 @@
 
 #root {
 	height: 100vh;
+	padding-top: 65px;
+
+	@include tablet_744__px {
+		padding-top: 90px;
+	}
 }
 h2 {
 	color: $app-nine-background-color;
