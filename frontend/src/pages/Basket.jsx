@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../services/api";
+import garbage from "../assets/icons/garbage.svg";
 import ContainerArticleSendAndBuy from "../components/ContainerArticleSendAndBuy";
 
 function Basket() {
@@ -32,17 +33,18 @@ function Basket() {
 			{articleByUser.map((item) => (
 				<ContainerArticleSendAndBuy
 					key={item.productsID}
-					classContainer="article_container__basket__page"
+					classContainer="article_container__basket__card"
 					classTitle="article_basket__h__name"
 					classDescriptionOrQuantity="article_basket__p__quantity"
 					classRising="article_basket__p__rising"
 					classButton="article_basket__button__delete"
 					nameArticle={item.productName}
-					descriptionArticleOrQuantity={item.quantity}
-					rising={item.totalPrice}
+					descriptionArticleOrQuantity={`Quantité ${item.quantity}`}
+					rising={`Prix ${item.totalPrice}`}
+					background="article_basket__div__background"
 					handleClick={() => handleDelete(item.productsID)}
 				>
-					➖
+					<img className="article_basket__img__garbage" src={garbage} alt="garbage" />
 				</ContainerArticleSendAndBuy>
 			))}
 		</div>

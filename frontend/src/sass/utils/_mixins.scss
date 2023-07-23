@@ -20,6 +20,14 @@
 	border-radius: $border-radius-primary-card;
 	margin-top: 20px;
 }
+@mixin card-form-secondary {
+	width: 90%;
+	height: 110px;
+	overflow: hidden;
+	background-color: $app-seven-background-color;
+	border-radius: $border-radius-primary-card;
+	margin-top: 20px;
+}
 
 @mixin display-grid($columns, $rows, $gap) {
 display: grid;
