@@ -24,6 +24,7 @@ $app-five-background-color: #d1c1b4;
 $app-six-background-color: #e74c3c;;
 $app-seven-background-color: #3f3238;
 $app-heigth-background-color: #494748;
+$app-nine-background-color: #FFF;
 
 $app-primary-background-color-linear:linear-gradient(249deg, rgb(189 194 198 / 18%) 0%, rgb(68 121 144 / 43%) 35%, rgb(159 187 193 / 20%) 64%, rgba(0, 22, 255, 0.1993172269) 100%);
 
@@ -46,10 +47,15 @@ $app-third-button-color-gradient: linear-gradient(135deg, #4caf50, #87d64a);
 $border-radius-primary-card: 15px;
 
 
+
 /* ------------------ height width button -----------------*/
 
 $app-height-button-primary: 45px;
 $app-width-button-primary: 45px;
+
+$app-button-radius-login:10px;
+
+$app-button-padding: 7px 25px;
 
 /* button border-color */
 

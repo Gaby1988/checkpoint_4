@@ -1,6 +1,12 @@
 .container_basket {
 	@include display-flex-flex-direction-column-justify(center, center);
 
+	@include tablet_744__px {
+		flex-direction: initial;
+		flex-wrap: wrap;
+		column-gap: 45px;
+	}
+
 	.article_container__basket__card {
 		@include card-form-secondary;
 		@include display-grid(4, 3, 5px);
