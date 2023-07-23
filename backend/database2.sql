@@ -134,13 +134,6 @@ VALUES
         7.99
     ),
     (
-        "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe4.jpg?alt=media&token=feb763a3-e25b-43a0-9586-f359e70301eb",
-        'café chantilly',
-        'maison',
-        'café avec rajout de chantilly',
-        15.99
-    ),
-    (
         "https://firebasestorage.googleapis.com/v0/b/fir-c9cc8.appspot.com/o/imageCP4%2Fcafe5.jpg?alt=media&token=bc4f1f29-017c-4d30-b281-cb164cdc9db1",
         'café clair',
         'campagne',

@@ -55,29 +55,6 @@ const buyArticle = async (quantity, total, product_id, user_id) => {
 	}
 };
 
-// const buyArticle = async (quantity, total, product_id, user_id) => {
-// 	try {
-// 		const query = `
-//       INSERT INTO items (quantity, total, product_id, user_id)
-//       VALUES (?, ?, ?, ?)
-//       ON DUPLICATE KEY UPDATE
-//       quantity = quantity + VALUES(quantity),
-//       total = total + VALUES(total)
-//     `;
-
-// 		const [rows] = await database.query(query, [
-// 			quantity,
-// 			total,
-// 			product_id,
-// 			user_id,
-// 		]);
-// 		return rows[0];
-// 	} catch (error) {
-// 		console.info("buyArticle error", error);
-// 		throw new Error("Error buying article", error);
-// 	}
-// };
-
 const buyArticleUpdate = async (id, quantity, total) => {
 	try {
 		const rows = await database.query(
@@ -93,7 +70,7 @@ const buyArticleUpdate = async (id, quantity, total) => {
 const getArticleByQuantityAndTotalPrice = async () => {
 	try {
 		const rows = await database.query(
-			`SELECT users.email AS mail, products.name AS productName, items.quantity AS quantity, items.total AS totalPrice,
+			`SELECT items.id AS itemID, users.email AS mail, products.id AS productsID, products.name AS productName, items.quantity AS quantity, items.total AS totalPrice
 			FROM items
 			JOIN users ON users.id = items.user_id
 			JOIN products ON products.id = items.product_id
@@ -106,6 +83,21 @@ const getArticleByQuantityAndTotalPrice = async () => {
 	}
 };
 
+const deleteItems = async (id) => {
+	try {
+		const row = await database.query(
+			"DELETE items.* FROM items WHERE id = ?",
+			[id]
+		);
+		if (row.affectedRows === 0) {
+			throw new Error(`item id ${id} not found`);
+		}
+		return row;
+	} catch (error) {
+		throw new Error("Error deleting item");
+	}
+};
+
 module.exports = {
 	getItems,
 	getArticleTotalAndPriceTotal,
@@ -113,4 +105,5 @@ module.exports = {
 	buyArticle,
 	buyArticleUpdate,
 	getArticleByQuantityAndTotalPrice,
+	deleteItems,
 };

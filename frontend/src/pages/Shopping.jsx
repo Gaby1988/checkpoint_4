@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import api from "../services/api";
+import ContainerArticleSendAndBuy from "../components/ContainerArticleSendAndBuy";
 
 function Shopping() {
 	const [dataArticleToSend, setDataArticleToSend] = useState([]);
 	const [dataItems, setDataItems] = useState([]);
 	const [idUser1, setIdUser1] = useState([]);
 	const [refresh, setRefresh] = useState([]);
-	console.info(idUser1);
+	console.info(dataArticleToSend);
 
 	useEffect(() => {
 		const promises = [
@@ -41,7 +42,7 @@ function Shopping() {
 					total: parseFloat(price),
 				});
 				console.info(response.data);
-				console.info("if");
+				console.info("if", id);
 			} else {
 				const response = await api.put(`article/${id}`, {
 					quantity: quantity,
@@ -59,26 +60,27 @@ function Shopping() {
 		<div className="container_shopping">
 			{dataArticleToSend.length > 0 &&
 				dataArticleToSend[0].map((item) => (
-					<>
-						<article className="article_shopping" key={item.id}>
-							<img
-								className="article_shopping__img__picture"
-								src={item.picture}
-							/>
-							<h3 className="article_shopping__h__name">{item.name}</h3>
-							<p className="article_shopping__p__origin">{item.origin}</p>
-							<p className="article_shopping__p__description">
-								{item.description}
-							</p>
-							<p className="article_shopping__p__price">{item.price}</p>
-							<button
-								onClick={() => buyArticleOrUpdate(item.id, 1, item.price)}
-								className="article_shopping__button__up"
-							>
-								➕
-							</button>
-						</article>
-					</>
+					<ContainerArticleSendAndBuy
+						key={item.produitID}
+						classContainer="article_shopping"
+						classPicture="article_shopping__img__picture"
+						classTitle="article_shopping__h__name"
+						classOrigin="article_shopping__p__origin"
+						classDescriptionOrQuantity="article_shopping__p__description"
+						classRising="article_shopping__p__price"
+						classButton="article_shopping__button__up"
+						picture={item.picture}
+						nameArticle={item.name}
+						originArticle={item.origin}
+						descriptionArticleOrQuantity={item.description}
+						rising={item.price}
+						background="article_shopping__div__background"
+						handleClick={() =>
+							buyArticleOrUpdate(item.produitID, 1, item.price)
+						}
+					>
+						➕
+					</ContainerArticleSendAndBuy>
 				))}
 		</div>
 	);

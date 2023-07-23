@@ -11,3 +11,20 @@
 	justify-content: $justify;
 	align-items: $align;
 }
+
+@mixin card-form-primary {
+	width: 70%;
+	height: 300px;
+	overflow: hidden;
+	background-color: $app-seven-background-color;
+	border-radius: $border-radius-primary-card;
+	margin-top: 20px;
+}
+
+@mixin display-grid($columns, $rows, $gap) {
+display: grid;
+grid-template-columns: 5px  repeat($columns, 1fr) 5px;
+grid-template-rows: 5px repeat($rows, 1fr) 5px;
+gap: $gap;
+}
+
